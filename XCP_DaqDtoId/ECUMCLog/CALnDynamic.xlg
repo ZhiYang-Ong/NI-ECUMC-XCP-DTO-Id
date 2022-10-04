@@ -1,0 +1,149 @@
+ECUMC log file, version 2, created: July 09, 2020, 18:09:48
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ref    Prot  Time           Sender    Data                         Command                   Parameters                                                                             CmdCtr        
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0      XCP   18:06:50.255   Master    FF 00                        CONNECT                   Mode=NORMAL                                                                            
+1      XCP   18:06:50.271   ECU       FF 0C 00 08 08 00 01 01       -> OK                    RESOURCE=0xC, COMM_MODE_BASIC=0x0, MAX_CTO=0x8, MAX_DTO=0x8, PVER=0x1, TVER=0x1        
+2      XCP   18:06:50.271   Master    FD                           GET STATUS                                                                                                       
+3      XCP   18:06:50.271   ECU       FF 00 1D 00 00 00 00 00       -> OK                    Session Status=0x00, Resource Protection=0x1D, Session ID=0x0                          
+4      XCP   18:06:50.271   Master    F8 00 01                     GET SEED                  Mode = first. Resource = CAL/PAG                                                       
+5      XCP   18:06:50.287   ECU       FF 04 80 81 82 83 00 00       -> OK                    Length=0x4, Seed = 80, 81, 82, 83                                                      
+6      XCP   18:06:50.287   Master    F7 02 01 05                  UNLOCK                    Length=0x2, Key = 01 05                                                                
+7      XCP   18:06:50.287   ECU       FF 1C 00 00 00 00 00 00       -> OK                    Current Protection Status = 0x1C                                                       
+8      XCP   18:06:50.287   Master    F8 00 04                     GET SEED                  Mode = first. Resource = DAQ                                                           
+9      XCP   18:06:50.287   ECU       FF 04 80 81 82 83 00 00       -> OK                    Length=0x4, Seed = 80, 81, 82, 83                                                      
+10     XCP   18:06:50.287   Master    F7 02 01 05                  UNLOCK                    Length=0x2, Key = 01 05                                                                
+11     XCP   18:06:50.287   ECU       FF 18 00 00 00 00 00 00       -> OK                    Current Protection Status = 0x18                                                       
+12     XCP   18:06:50.287   Master    F8 00 08                     GET SEED                  Mode = first. Resource = STIM                                                          
+13     XCP   18:06:50.302   ECU       FF 04 80 81 82 83 00 00       -> OK                    Length=0x4, Seed = 80, 81, 82, 83                                                      
+14     XCP   18:06:50.302   Master    F7 02 01 05                  UNLOCK                    Length=0x2, Key = 01 05                                                                
+15     XCP   18:06:50.302   ECU       FF 10 00 00 00 00 00 00       -> OK                    Current Protection Status = 0x10                                                       
+16     XCP   18:06:50.302   Master    F8 00 10                     GET SEED                  Mode = first. Resource = PGM                                                           
+17     XCP   18:06:50.302   ECU       FF 04 80 81 82 83 00 00       -> OK                    Length=0x4, Seed = 80, 81, 82, 83                                                      
+18     XCP   18:06:50.302   Master    F7 02 01 05                  UNLOCK                    Length=0x2, Key = 01 05                                                                
+19     XCP   18:06:50.318   ECU       FF 00 00 00 00 00 00 00       -> OK                    Current Protection Status = 0x0                                                        
+20     XCP   18:06:50.318   Master    DA                           GET_DAQ_PROCESSOR_INFO                                                                                           
+21     XCP   18:06:50.318   ECU       FF 03 01 00 04 00 01 00       -> OK                    PROP=0x03, MAX_DAQ=0x1, MAX_EVENT=0x4, MIN_DAQ=0x1, KEY_BYTE=0x0                       
+22     XCP   18:06:50.318   Master    D7 00 00 00                  GET DAQ EVENT INFO        Event Channel Number = 0x0                                                             
+23     XCP   18:06:50.318   ECU       FE 20 00 00 00 00 00 00       -> E R R O R             ERR_CMD_UNKNOWN                                                                        
+24     XCP   18:06:50.318   Master    D9                           GET_DAQ_RESOLUTION_INFO                                                                                          
+25     XCP   18:06:50.334   ECU       FF 01 07 01 07 00 00 00       -> OK                    GRAN_DAQ=0x01, MAXS_DAQ=0x7, GRAN_STIM=0x1, MAXS_STIM=0x7, TS_MODE=0x0, TS_TICKS=0x0   
+26     XCP   18:06:50.334   Master    E9                           GET_PAG_PROCESSOR_INFO                                                                                           
+27     XCP   18:06:50.334   ECU       FF 01 00 00 00 00 00 00       -> OK                    Number of segments = 0x1, Freeze supported = 0x0                                       
+28     XCP   18:06:50.334   Master    E8 00 00 00 00               GET SEGMENT INFO          Segment=0x0, Get Address                                                               
+29     XCP   18:06:50.334   ECU       FF 00 00 00 00 00 00 00       -> OK                    0x0000                                                                                 
+30     XCP   18:06:50.334   Master    E8 00 00 01 00               GET SEGMENT INFO          Segment=0x0, Get Length                                                                
+31     XCP   18:06:50.334   ECU       FF 00 00 00 00 00 00 00       -> OK                    0x0000                                                                                 
+32     XCP   18:06:50.334   Master    E8 01 00 01 00               GET SEGMENT INFO          Segment=0x0, Get Standard Info                                                         
+33     XCP   18:06:50.349   ECU       FF 02 00 00 00 00 00 00       -> OK                    0x0000                                                                                 
+34     XCP   18:06:50.349   Master    E7 00 00 00                  GET PAGE INFO             SEGMENT=0x0, PAGE=0x0                                                                  
+35     XCP   18:06:50.349   ECU       FF 2A 00 00 00 00 00 00       -> OK                    PAGE_PROP=0x2A, INIT_SEGM=0x0                                                          
+36     XCP   18:06:50.349   Master    E7 00 00 01                  GET PAGE INFO             SEGMENT=0x0, PAGE=0x1                                                                  
+37     XCP   18:06:50.349   ECU       FF 0A 00 00 00 00 00 00       -> OK                    PAGE_PROP=0xA, INIT_SEGM=0x0                                                           
+38     XCP   18:06:50.349   Master    CE                           GET_PGM_PROCESSOR_INFO                                                                                           
+39     XCP   18:06:50.349   ECU       FF 02 01 00 00 00 00 00       -> OK                    PGM_PROPERTIES = 0x2, MAX_SECTOR = 0x1                                                 
+40     XCP   18:06:50.349   Master    EB 03 00 00                  SET CAL PAGE              Mode=0x3, SegNum=0x0, PageNum=0x0                                                      
+41     XCP   18:06:50.365   ECU       FF 20 00 00 00 00 00 00       -> OK                                                                                                           
+42     XCP   18:06:50.365   Master    D6                           FREE_DAQ                                                                                                         
+43     XCP   18:06:50.365   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+44     XCP   18:06:50.365   Master    D5 00 01 00                  ALLOC DAQ                 DAQ_COUNT = 1                                                                          
+45     XCP   18:06:50.365   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+46     XCP   18:06:50.365   Master    D4 00 01 00 01               ALLOC ODT                 DAQ_LIST_NUMBER = 1, ODT_COUNT = 1                                                     
+47     XCP   18:06:50.380   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+48     XCP   18:06:50.380   Master    D3 00 01 00 00 02            ALLOC ODT ENTRY           DAQ_LIST_NUMBER = 1, ODT_NUMBER = 0, ODT_ENTRIES_COUNT=2                               
+49     XCP   18:06:50.380   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+50     XCP   18:06:50.380   Master    DA                           GET_DAQ_PROCESSOR_INFO                                                                                           
+51     XCP   18:06:50.380   ECU       FF 03 02 00 04 00 01 00       -> OK                    PROP=0x03, MAX_DAQ=0x2, MAX_EVENT=0x4, MIN_DAQ=0x1, KEY_BYTE=0x0                       
+52     XCP   18:06:50.380   Master    D8 00 01 00                  GET DAQ LIST INFO         DAQ_LIST_NUMBER = 0x1                                                                  
+53     XCP   18:06:50.396   ECU       FF 0C 01 02 00 00 00 00       -> OK                    Prop=0xC, MAX_ODT=0x1, MAX_ODT_ENTRIES=0x2, FIXED_EVENT=0x0                            
+54     XCP   18:06:50.396   Master    D8 00 00 00                  GET DAQ LIST INFO         DAQ_LIST_NUMBER = 0x0                                                                  
+55     XCP   18:06:50.396   ECU       FF 0D 06 07 00 00 00 00       -> OK                    Prop=0xD, MAX_ODT=0x6, MAX_ODT_ENTRIES=0x7, FIXED_EVENT=0x0                            
+56     XCP   18:06:50.396   Master    D8 00 01 00                  GET DAQ LIST INFO         DAQ_LIST_NUMBER = 0x1                                                                  
+57     XCP   18:06:50.396   ECU       FF 0C 01 02 00 00 00 00       -> OK                    Prop=0xC, MAX_ODT=0x1, MAX_ODT_ENTRIES=0x2, FIXED_EVENT=0x0                            
+58     XCP   18:06:50.396   Master    E2 00 01 00 00 00            SET DAQ PTR               DAQ=0x1, ODT=0x0, ENTRY=0x0                                                            
+59     XCP   18:06:50.396   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+60     XCP   18:06:50.396   Master    E1 FF 01 00 E8 00 00 00      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xE8, Ext=0x0                                           
+61     XCP   18:06:50.412   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+62     XCP   18:06:50.412   Master    E1 FF 04 00 F0 00 00 00      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xF0, Ext=0x0                                           
+63     XCP   18:06:50.412   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+64     XCP   18:06:50.412   Master    E0 00 01 00 03 00 01 00      SET DAQ LIST MODE         DAQ=0x1, Mode=0x0, Event=0x3, Prescaler=0x1, Prio=0x0                                  
+65     XCP   18:06:50.412   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+66     XCP   18:06:50.412   Master    DE 02 01 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x1                                                   
+67     XCP   18:06:50.427   ECU       FF 10 00 00 00 00 00 00       -> OK                    FIRST_PID = 0x10                                                                       
+68     XCP   18:06:50.427   Master    DD 01                        START STOP SYNCH          Mode = START SELECTED                                                                  
+69     XCP   18:06:50.427   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+70     XCP   18:06:50.459   ECU       10 83 00 00 00 00 00 00      DAQ: PID = 0x10           83 00 00 00 00 00 00                                                                   
+71     XCP   18:06:50.537   ECU       10 81 00 00 00 00 00 00      DAQ: PID = 0x10           81 00 00 00 00 00 00                                                                   
+72     XCP   18:06:50.615   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+73     XCP   18:06:50.693   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+74     XCP   18:06:50.787   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+75     XCP   18:06:50.865   ECU       10 81 00 00 00 00 00 00      DAQ: PID = 0x10           81 00 00 00 00 00 00                                                                   
+76     XCP   18:06:50.943   ECU       10 83 00 00 00 00 00 00      DAQ: PID = 0x10           83 00 00 00 00 00 00                                                                   
+77     XCP   18:06:51.021   ECU       10 85 00 00 80 3F 00 00      DAQ: PID = 0x10           85 00 00 80 3F 00 00                                                                   
+78     XCP   18:06:51.099   ECU       10 88 00 00 80 3F 00 00      DAQ: PID = 0x10           88 00 00 80 3F 00 00                                                                   
+79     XCP   18:06:51.177   ECU       10 8C 00 00 80 3F 00 00      DAQ: PID = 0x10           8C 00 00 80 3F 00 00                                                                   
+80     XCP   18:06:51.255   ECU       10 90 00 00 80 3F 00 00      DAQ: PID = 0x10           90 00 00 80 3F 00 00                                                                   
+81     XCP   18:06:51.334   ECU       10 95 00 00 80 3F 00 00      DAQ: PID = 0x10           95 00 00 80 3F 00 00                                                                   
+82     XCP   18:06:51.412   ECU       10 9B 00 00 80 3F 00 00      DAQ: PID = 0x10           9B 00 00 80 3F 00 00                                                                   
+83     XCP   18:06:51.490   ECU       10 A1 00 00 00 00 00 00      DAQ: PID = 0x10           A1 00 00 00 00 00 00                                                                   
+84     XCP   18:06:51.584   ECU       10 A8 00 00 00 00 00 00      DAQ: PID = 0x10           A8 00 00 00 00 00 00                                                                   
+85     XCP   18:06:51.662   ECU       10 B0 00 00 00 00 00 00      DAQ: PID = 0x10           B0 00 00 00 00 00 00                                                                   
+86     XCP   18:06:51.740   ECU       10 B8 00 00 00 00 00 00      DAQ: PID = 0x10           B8 00 00 00 00 00 00                                                                   
+87     XCP   18:06:51.818   ECU       10 C1 00 00 00 00 00 00      DAQ: PID = 0x10           C1 00 00 00 00 00 00                                                                   
+88     XCP   18:06:51.896   ECU       10 CB 00 00 00 00 00 00      DAQ: PID = 0x10           CB 00 00 00 00 00 00                                                                   
+89     XCP   18:06:51.974   ECU       10 D5 00 00 80 3F 00 00      DAQ: PID = 0x10           D5 00 00 80 3F 00 00                                                                   
+90     XCP   18:06:52.052   ECU       10 CB 00 00 80 3F 00 00      DAQ: PID = 0x10           CB 00 00 80 3F 00 00                                                                   
+91     XCP   18:06:52.146   ECU       10 C1 00 00 80 3F 00 00      DAQ: PID = 0x10           C1 00 00 80 3F 00 00                                                                   
+92     XCP   18:06:52.224   ECU       10 B8 00 00 80 3F 00 00      DAQ: PID = 0x10           B8 00 00 80 3F 00 00                                                                   
+93     XCP   18:06:52.302   ECU       10 B0 00 00 80 3F 00 00      DAQ: PID = 0x10           B0 00 00 80 3F 00 00                                                                   
+94     XCP   18:06:52.380   ECU       10 A8 00 00 80 3F 00 00      DAQ: PID = 0x10           A8 00 00 80 3F 00 00                                                                   
+95     XCP   18:06:52.459   ECU       10 A1 00 00 00 00 00 00      DAQ: PID = 0x10           A1 00 00 00 00 00 00                                                                   
+96     XCP   18:06:52.537   ECU       10 9B 00 00 00 00 00 00      DAQ: PID = 0x10           9B 00 00 00 00 00 00                                                                   
+97     XCP   18:06:52.615   ECU       10 95 00 00 00 00 00 00      DAQ: PID = 0x10           95 00 00 00 00 00 00                                                                   
+98     XCP   18:06:52.709   ECU       10 90 00 00 00 00 00 00      DAQ: PID = 0x10           90 00 00 00 00 00 00                                                                   
+99     XCP   18:06:52.787   ECU       10 8C 00 00 00 00 00 00      DAQ: PID = 0x10           8C 00 00 00 00 00 00                                                                   
+100    XCP   18:06:52.865   ECU       10 88 00 00 00 00 00 00      DAQ: PID = 0x10           88 00 00 00 00 00 00                                                                   
+101    XCP   18:06:52.943   ECU       10 85 00 00 00 00 00 00      DAQ: PID = 0x10           85 00 00 00 00 00 00                                                                   
+102    XCP   18:06:53.021   ECU       10 83 00 00 80 3F 00 00      DAQ: PID = 0x10           83 00 00 80 3F 00 00                                                                   
+103    XCP   18:06:53.099   ECU       10 81 00 00 80 3F 00 00      DAQ: PID = 0x10           81 00 00 80 3F 00 00                                                                   
+104    XCP   18:06:53.177   ECU       10 80 00 00 80 3F 00 00      DAQ: PID = 0x10           80 00 00 80 3F 00 00                                                                   
+105    XCP   18:06:53.255   ECU       10 80 00 00 80 3F 00 00      DAQ: PID = 0x10           80 00 00 80 3F 00 00                                                                   
+106    XCP   18:06:53.334   ECU       10 80 00 00 80 3F 00 00      DAQ: PID = 0x10           80 00 00 80 3F 00 00                                                                   
+107    XCP   18:06:53.412   ECU       10 81 00 00 80 3F 00 00      DAQ: PID = 0x10           81 00 00 80 3F 00 00                                                                   
+108    XCP   18:06:53.505   ECU       10 83 00 00 00 00 00 00      DAQ: PID = 0x10           83 00 00 00 00 00 00                                                                   
+109    XCP   18:06:53.584   ECU       10 85 00 00 00 00 00 00      DAQ: PID = 0x10           85 00 00 00 00 00 00                                                                   
+110    XCP   18:06:53.662   ECU       10 88 00 00 00 00 00 00      DAQ: PID = 0x10           88 00 00 00 00 00 00                                                                   
+111    XCP   18:06:53.740   ECU       10 8C 00 00 00 00 00 00      DAQ: PID = 0x10           8C 00 00 00 00 00 00                                                                   
+112    XCP   18:06:53.818   ECU       10 90 00 00 00 00 00 00      DAQ: PID = 0x10           90 00 00 00 00 00 00                                                                   
+113    XCP   18:06:53.896   ECU       10 95 00 00 00 00 00 00      DAQ: PID = 0x10           95 00 00 00 00 00 00                                                                   
+114    XCP   18:06:53.974   ECU       10 9B 00 00 80 3F 00 00      DAQ: PID = 0x10           9B 00 00 80 3F 00 00                                                                   
+115    XCP   18:06:54.052   ECU       10 A1 00 00 80 3F 00 00      DAQ: PID = 0x10           A1 00 00 80 3F 00 00                                                                   
+116    XCP   18:06:54.146   ECU       10 A8 00 00 80 3F 00 00      DAQ: PID = 0x10           A8 00 00 80 3F 00 00                                                                   
+117    XCP   18:06:54.224   ECU       10 B0 00 00 80 3F 00 00      DAQ: PID = 0x10           B0 00 00 80 3F 00 00                                                                   
+118    XCP   18:06:54.302   ECU       10 B8 00 00 80 3F 00 00      DAQ: PID = 0x10           B8 00 00 80 3F 00 00                                                                   
+119    XCP   18:06:54.380   ECU       10 C1 00 00 80 3F 00 00      DAQ: PID = 0x10           C1 00 00 80 3F 00 00                                                                   
+120    XCP   18:06:54.459   ECU       10 CB 00 00 00 00 00 00      DAQ: PID = 0x10           CB 00 00 00 00 00 00                                                                   
+121    XCP   18:06:54.537   ECU       10 D5 00 00 00 00 00 00      DAQ: PID = 0x10           D5 00 00 00 00 00 00                                                                   
+122    XCP   18:06:54.615   ECU       10 CB 00 00 00 00 00 00      DAQ: PID = 0x10           CB 00 00 00 00 00 00                                                                   
+123    XCP   18:06:54.693   ECU       10 C1 00 00 00 00 00 00      DAQ: PID = 0x10           C1 00 00 00 00 00 00                                                                   
+124    XCP   18:06:54.787   ECU       10 B8 00 00 00 00 00 00      DAQ: PID = 0x10           B8 00 00 00 00 00 00                                                                   
+125    XCP   18:06:54.865   ECU       10 B0 00 00 00 00 00 00      DAQ: PID = 0x10           B0 00 00 00 00 00 00                                                                   
+126    XCP   18:06:54.943   ECU       10 A8 00 00 00 00 00 00      DAQ: PID = 0x10           A8 00 00 00 00 00 00                                                                   
+127    XCP   18:06:55.021   ECU       10 A1 00 00 80 3F 00 00      DAQ: PID = 0x10           A1 00 00 80 3F 00 00                                                                   
+128    XCP   18:06:55.099   ECU       10 9B 00 00 80 3F 00 00      DAQ: PID = 0x10           9B 00 00 80 3F 00 00                                                                   
+129    XCP   18:06:55.177   ECU       10 95 00 00 80 3F 00 00      DAQ: PID = 0x10           95 00 00 80 3F 00 00                                                                   
+130    XCP   18:06:55.271   ECU       10 90 00 00 80 3F 00 00      DAQ: PID = 0x10           90 00 00 80 3F 00 00                                                                   
+131    XCP   18:06:55.334   ECU       10 8C 00 00 80 3F 00 00      DAQ: PID = 0x10           8C 00 00 80 3F 00 00                                                                   
+132    XCP   18:06:55.412   ECU       10 88 00 00 80 3F 00 00      DAQ: PID = 0x10           88 00 00 80 3F 00 00                                                                   
+133    XCP   18:06:55.505   ECU       10 85 00 00 00 00 00 00      DAQ: PID = 0x10           85 00 00 00 00 00 00                                                                   
+134    XCP   18:06:55.584   ECU       10 83 00 00 00 00 00 00      DAQ: PID = 0x10           83 00 00 00 00 00 00                                                                   
+135    XCP   18:06:55.662   ECU       10 81 00 00 00 00 00 00      DAQ: PID = 0x10           81 00 00 00 00 00 00                                                                   
+136    XCP   18:06:55.740   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+137    XCP   18:06:55.818   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+138    XCP   18:06:55.896   ECU       10 80 00 00 00 00 00 00      DAQ: PID = 0x10           80 00 00 00 00 00 00                                                                   
+139    XCP   18:06:55.912   Master    DE 02 01 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x1                                                   
+140    XCP   18:06:55.927   ECU       FF 10 00 00 00 00 00 00       -> OK                    FIRST_PID = 0x10                                                                       
+141    XCP   18:06:55.927   Master    DD 02                        START STOP SYNCH          Mode = STOP SELECTED                                                                   
+142    XCP   18:06:55.927   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           
+143    XCP   18:06:56.459   Master    FE                           DISCONNECT                                                                                                       
+144    XCP   18:06:56.459   ECU       FF 00 00 00 00 00 00 00       -> OK                                                                                                           

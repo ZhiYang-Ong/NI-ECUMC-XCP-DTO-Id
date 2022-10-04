@@ -1,0 +1,516 @@
+ECUMC log file, version 2, created: June 09, 2022, 09:45:13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ref    Prot  Time           Sender    Data                         Command                   Parameters                                                                             CmdCtr        
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+512    XCP   9:24:39.819    Master    FF 00                        CONNECT                   Mode=NORMAL                                                                            
+513    XCP   9:24:39.822    ECU       FF 0D C0 08 08 00 01 01       -> OK                    RESOURCE=0xD, COMM_MODE_BASIC=0xC0, MAX_CTO=0x8, MAX_DTO=0x8, PVER=0x1, TVER=0x1       
+514    XCP   9:24:39.822    Master    FD                           GET STATUS                                                                                                       
+515    XCP   9:24:39.826    ECU       FF 00 1D 00 00 00 48 91       -> OK                    Session Status=0x00, Resource Protection=0x1D, Session ID=0x0                          
+516    XCP   9:24:39.835    Master    F8 00 01                     GET SEED                  Mode = first. Resource = CAL/PAG                                                       
+517    XCP   9:24:39.838    ECU       FF 04 00 0B DA EF 48 91       -> OK                    Length=0x4, Seed = 00, 0B, DA, EF                                                      
+518    XCP   9:24:39.847    Master    F7 04 00 0B DA EF            UNLOCK                    Length=0x4, Key = 00 0B DA EF                                                          
+519    XCP   9:24:39.850    ECU       FF 00 00 00 00 00 48 91       -> OK                    Current Protection Status = 0x0                                                        
+520    XCP   9:24:39.850    Master    F8 00 04                     GET SEED                  Mode = first. Resource = DAQ                                                           
+521    XCP   9:24:39.852    ECU       FF 00 00 00 00 00 48 91       -> OK                    Length=0x0, Seed = 00, 00, 00, 00                                                      
+522    XCP   9:24:39.852    Master    F8 00 08                     GET SEED                  Mode = first. Resource = STIM                                                          
+523    XCP   9:24:39.854    ECU       FF 00 00 00 00 00 48 91       -> OK                    Length=0x0, Seed = 00, 00, 00, 00                                                      
+524    XCP   9:24:39.854    Master    F8 00 10                     GET SEED                  Mode = first. Resource = PGM                                                           
+525    XCP   9:24:39.858    ECU       FF 00 00 00 00 00 48 91       -> OK                    Length=0x0, Seed = 00, 00, 00, 00                                                      
+526    XCP   9:24:39.858    Master    FB                           GET COMM MODE INFO                                                                                               
+527    XCP   9:24:39.860    ECU       FF 00 01 00 38 FF 00 42       -> OK                    MODE=0x1, MAX_BS=0x38, MAX_ST=0xFF, Q_SIZE=0x0, DRVER=0x42                             
+528    XCP   9:24:39.860    Master    DA                           GET_DAQ_PROCESSOR_INFO                                                                                           
+529    XCP   9:24:39.862    ECU       FF 04 0E 00 0E 00 00 20       -> OK                    PROP=0x04, MAX_DAQ=0xE, MAX_EVENT=0xE, MIN_DAQ=0x0, KEY_BYTE=0x20                      
+530    XCP   9:24:39.862    Master    D7 00 00 00                  GET DAQ EVENT INFO        Event Channel Number = 0x0                                                             
+531    XCP   9:24:39.866    ECU       FF 04 01 00 05 06 05 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x5, UNIT_TM=0x6, PRIO=0x5               
+532    XCP   9:24:39.866    Master    D7 00 00 00                  GET DAQ EVENT INFO        Event Channel Number = 0x0                                                             
+533    XCP   9:24:39.868    ECU       FF 04 01 00 05 06 05 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x5, UNIT_TM=0x6, PRIO=0x5               
+534    XCP   9:24:39.868    Master    D7 00 01 00                  GET DAQ EVENT INFO        Event Channel Number = 0x1                                                             
+535    XCP   9:24:39.870    ECU       FF 04 01 00 05 06 05 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x5, UNIT_TM=0x6, PRIO=0x5               
+536    XCP   9:24:39.870    Master    D7 00 02 00                  GET DAQ EVENT INFO        Event Channel Number = 0x2                                                             
+537    XCP   9:24:39.872    ECU       FF 04 01 00 05 06 05 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x5, UNIT_TM=0x6, PRIO=0x5               
+538    XCP   9:24:39.872    Master    D7 00 03 00                  GET DAQ EVENT INFO        Event Channel Number = 0x3                                                             
+539    XCP   9:24:39.874    ECU       FF 04 01 00 0A 06 04 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0xA, UNIT_TM=0x6, PRIO=0x4               
+540    XCP   9:24:39.874    Master    D7 00 04 00                  GET DAQ EVENT INFO        Event Channel Number = 0x4                                                             
+541    XCP   9:24:39.876    ECU       FF 04 01 00 0A 06 04 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0xA, UNIT_TM=0x6, PRIO=0x4               
+542    XCP   9:24:39.876    Master    D7 00 05 00                  GET DAQ EVENT INFO        Event Channel Number = 0x5                                                             
+543    XCP   9:24:39.878    ECU       FF 04 01 00 0A 06 04 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0xA, UNIT_TM=0x6, PRIO=0x4               
+544    XCP   9:24:39.878    Master    D7 00 06 00                  GET DAQ EVENT INFO        Event Channel Number = 0x6                                                             
+545    XCP   9:24:39.880    ECU       FF 04 01 00 14 06 03 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x14, UNIT_TM=0x6, PRIO=0x3              
+546    XCP   9:24:39.880    Master    D7 00 07 00                  GET DAQ EVENT INFO        Event Channel Number = 0x7                                                             
+547    XCP   9:24:39.882    ECU       FF 04 01 00 14 06 03 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x14, UNIT_TM=0x6, PRIO=0x3              
+548    XCP   9:24:39.882    Master    D7 00 08 00                  GET DAQ EVENT INFO        Event Channel Number = 0x8                                                             
+549    XCP   9:24:39.884    ECU       FF 04 01 00 14 06 03 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x14, UNIT_TM=0x6, PRIO=0x3              
+550    XCP   9:24:39.884    Master    D7 00 09 00                  GET DAQ EVENT INFO        Event Channel Number = 0x9                                                             
+551    XCP   9:24:39.886    ECU       FF 04 01 00 32 06 02 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x32, UNIT_TM=0x6, PRIO=0x2              
+552    XCP   9:24:39.886    Master    D7 00 0A 00                  GET DAQ EVENT INFO        Event Channel Number = 0xA                                                             
+553    XCP   9:24:39.888    ECU       FF 04 01 00 32 06 02 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x32, UNIT_TM=0x6, PRIO=0x2              
+554    XCP   9:24:39.888    Master    D7 00 0B 00                  GET DAQ EVENT INFO        Event Channel Number = 0xB                                                             
+555    XCP   9:24:39.890    ECU       FF 04 01 00 32 06 02 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x32, UNIT_TM=0x6, PRIO=0x2              
+556    XCP   9:24:39.890    Master    D7 00 0C 00                  GET DAQ EVENT INFO        Event Channel Number = 0xC                                                             
+557    XCP   9:24:39.892    ECU       FF 04 01 00 64 06 01 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x64, UNIT_TM=0x6, PRIO=0x1              
+558    XCP   9:24:39.892    Master    D7 00 0D 00                  GET DAQ EVENT INFO        Event Channel Number = 0xD                                                             
+559    XCP   9:24:39.894    ECU       FF 04 01 00 64 06 01 91       -> OK                    PROP=0x4, MAX_DAQ=0x1, NAME_LEN=0x0, CYCLE_TM=0x64, UNIT_TM=0x6, PRIO=0x1              
+560    XCP   9:24:39.894    Master    D9                           GET_DAQ_RESOLUTION_INFO                                                                                          
+561    XCP   9:24:39.896    ECU       FF 01 04 01 00 30 E8 03       -> OK                    GRAN_DAQ=0x01, MAXS_DAQ=0x4, GRAN_STIM=0x1, MAXS_STIM=0x0, TS_MODE=0x30, TS_TICKS=0x3E8
+562    XCP   9:24:39.896    Master    E9                           GET_PAG_PROCESSOR_INFO                                                                                           
+563    XCP   9:24:39.898    ECU       FF 01 00 00 00 00 48 91       -> OK                    Number of segments = 0x1, Freeze supported = 0x0                                       
+564    XCP   9:24:39.898    Master    E8 00 00 00 00               GET SEGMENT INFO          Segment=0x0, Get Address                                                               
+565    XCP   9:24:39.900    ECU       FE 20 00 00 00 00 48 91       -> E R R O R             ERR_CMD_UNKNOWN                                                                        
+566    XCP   9:24:39.900    Master    CE                           GET_PGM_PROCESSOR_INFO                                                                                           
+567    XCP   9:24:39.902    ECU       FE 20 00 00 00 00 48 91       -> E R R O R             ERR_CMD_UNKNOWN                                                                        
+568    XCP   9:24:39.902    Master    E3 00 00 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x0                                                                  
+569    XCP   9:24:39.906    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+570    XCP   9:24:39.906    Master    E2 00 00 00 00 00            SET DAQ PTR               DAQ=0x0, ODT=0x0, ENTRY=0x0                                                            
+571    XCP   9:24:39.908    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+572    XCP   9:24:39.908    Master    E1 FF 01 00 65 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3665, Ext=0x0                                     
+573    XCP   9:24:39.910    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+574    XCP   9:24:39.910    Master    E1 FF 01 00 8F 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC368F, Ext=0x0                                     
+575    XCP   9:24:39.912    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+576    XCP   9:24:39.912    Master    E1 FF 04 00 10 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2C10, Ext=0x0                                     
+577    XCP   9:24:39.914    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+578    XCP   9:24:39.914    Master    E1 FF 01 00 4C 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2C4C, Ext=0x0                                     
+579    XCP   9:24:39.916    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+580    XCP   9:24:39.916    Master    E2 00 00 00 01 00            SET DAQ PTR               DAQ=0x0, ODT=0x1, ENTRY=0x0                                                            
+581    XCP   9:24:39.918    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+582    XCP   9:24:39.918    Master    E1 FF 03 00 4D 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC2C4D, Ext=0x0                                     
+583    XCP   9:24:39.920    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+584    XCP   9:24:39.920    Master    E1 FF 04 00 68 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2C68, Ext=0x0                                     
+585    XCP   9:24:39.922    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+586    XCP   9:24:39.922    Master    E0 00 00 00 00 00 01 00      SET DAQ LIST MODE         DAQ=0x0, Mode=0x0, Event=0x0, Prescaler=0x1, Prio=0x0                                  
+587    XCP   9:24:39.924    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+588    XCP   9:24:39.924    Master    DE 02 00 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x0                                                   
+589    XCP   9:24:39.926    ECU       FF 00 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x0                                                                        
+590    XCP   9:24:39.926    Master    E3 00 01 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x1                                                                  
+591    XCP   9:24:39.928    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+592    XCP   9:24:39.928    Master    E2 00 01 00 00 00            SET DAQ PTR               DAQ=0x1, ODT=0x0, ENTRY=0x0                                                            
+593    XCP   9:24:39.930    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+594    XCP   9:24:39.930    Master    E1 FF 01 00 37 2D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2D37, Ext=0x0                                     
+595    XCP   9:24:39.932    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+596    XCP   9:24:39.932    Master    E1 FF 04 00 58 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1C58, Ext=0x0                                     
+597    XCP   9:24:39.934    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+598    XCP   9:24:39.934    Master    E1 FF 02 00 5C 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1C5C, Ext=0x0                                     
+599    XCP   9:24:39.936    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+600    XCP   9:24:39.936    Master    E2 00 01 00 01 00            SET DAQ PTR               DAQ=0x1, ODT=0x1, ENTRY=0x0                                                            
+601    XCP   9:24:39.938    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+602    XCP   9:24:39.938    Master    E1 FF 02 00 5E 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1C5E, Ext=0x0                                     
+603    XCP   9:24:39.940    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+604    XCP   9:24:39.940    Master    E1 FF 04 00 58 20 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2058, Ext=0x0                                     
+605    XCP   9:24:39.942    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+606    XCP   9:24:39.942    Master    E1 FF 01 00 D6 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BD6, Ext=0x0                                     
+607    XCP   9:24:39.944    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+608    XCP   9:24:39.944    Master    E2 00 01 00 02 00            SET DAQ PTR               DAQ=0x1, ODT=0x2, ENTRY=0x0                                                            
+609    XCP   9:24:39.946    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+610    XCP   9:24:39.946    Master    E1 FF 01 00 08 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C08, Ext=0x0                                     
+611    XCP   9:24:39.948    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+612    XCP   9:24:39.948    Master    E1 FF 01 00 3E 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C3E, Ext=0x0                                     
+613    XCP   9:24:39.950    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+614    XCP   9:24:39.950    Master    E0 00 01 00 01 00 01 00      SET DAQ LIST MODE         DAQ=0x1, Mode=0x0, Event=0x1, Prescaler=0x1, Prio=0x0                                  
+615    XCP   9:24:39.952    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+616    XCP   9:24:39.952    Master    DE 02 01 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x1                                                   
+617    XCP   9:24:39.954    ECU       FF 03 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x3                                                                        
+618    XCP   9:24:39.954    Master    E3 00 02 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x2                                                                  
+619    XCP   9:24:39.956    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+620    XCP   9:24:39.956    Master    E2 00 02 00 00 00            SET DAQ PTR               DAQ=0x2, ODT=0x0, ENTRY=0x0                                                            
+621    XCP   9:24:39.958    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+622    XCP   9:24:39.958    Master    E1 FF 04 00 30 1B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1B30, Ext=0x0                                     
+623    XCP   9:24:39.960    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+624    XCP   9:24:39.960    Master    E1 FF 03 00 F4 1B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1BF4, Ext=0x0                                     
+625    XCP   9:24:39.962    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+626    XCP   9:24:39.962    Master    E2 00 02 00 01 00            SET DAQ PTR               DAQ=0x2, ODT=0x1, ENTRY=0x0                                                            
+627    XCP   9:24:39.964    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+628    XCP   9:24:39.964    Master    E1 FF 01 00 F7 1B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1BF7, Ext=0x0                                     
+629    XCP   9:24:39.966    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+630    XCP   9:24:39.966    Master    E1 FF 01 00 63 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3663, Ext=0x0                                     
+631    XCP   9:24:39.968    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+632    XCP   9:24:39.968    Master    E1 FF 01 00 66 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3666, Ext=0x0                                     
+633    XCP   9:24:39.970    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+634    XCP   9:24:39.970    Master    E1 FF 01 00 33 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C33, Ext=0x0                                     
+635    XCP   9:24:39.972    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+636    XCP   9:24:39.972    Master    E0 00 02 00 02 00 01 00      SET DAQ LIST MODE         DAQ=0x2, Mode=0x0, Event=0x2, Prescaler=0x1, Prio=0x0                                  
+637    XCP   9:24:39.973    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+638    XCP   9:24:39.974    Master    DE 02 02 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x2                                                   
+639    XCP   9:24:39.976    ECU       FF 06 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x6                                                                        
+640    XCP   9:24:39.976    Master    E3 00 03 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x3                                                                  
+641    XCP   9:24:39.977    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+642    XCP   9:24:39.977    Master    E2 00 03 00 00 00            SET DAQ PTR               DAQ=0x3, ODT=0x0, ENTRY=0x0                                                            
+643    XCP   9:24:39.980    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+644    XCP   9:24:39.980    Master    E1 FF 04 00 30 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A30, Ext=0x0                                     
+645    XCP   9:24:39.981    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+646    XCP   9:24:39.981    Master    E1 FF 03 00 40 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1A40, Ext=0x0                                     
+647    XCP   9:24:39.983    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+648    XCP   9:24:39.983    Master    E2 00 03 00 01 00            SET DAQ PTR               DAQ=0x3, ODT=0x1, ENTRY=0x0                                                            
+649    XCP   9:24:39.985    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+650    XCP   9:24:39.985    Master    E1 FF 01 00 43 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1A43, Ext=0x0                                     
+651    XCP   9:24:39.987    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+652    XCP   9:24:39.987    Master    E1 FF 04 00 50 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A50, Ext=0x0                                     
+653    XCP   9:24:39.989    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+654    XCP   9:24:39.989    Master    E1 FF 02 00 60 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1A60, Ext=0x0                                     
+655    XCP   9:24:39.991    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+656    XCP   9:24:39.991    Master    E2 00 03 00 02 00            SET DAQ PTR               DAQ=0x3, ODT=0x2, ENTRY=0x0                                                            
+657    XCP   9:24:39.994    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+658    XCP   9:24:39.994    Master    E1 FF 02 00 62 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1A62, Ext=0x0                                     
+659    XCP   9:24:39.997    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+660    XCP   9:24:39.998    Master    E0 00 03 00 03 00 01 00      SET DAQ LIST MODE         DAQ=0x3, Mode=0x0, Event=0x3, Prescaler=0x1, Prio=0x0                                  
+661    XCP   9:24:39.999    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+662    XCP   9:24:39.999    Master    DE 02 03 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x3                                                   
+663    XCP   9:24:40.001    ECU       FF 08 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x8                                                                        
+664    XCP   9:24:40.002    Master    E3 00 04 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x4                                                                  
+665    XCP   9:24:40.003    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+666    XCP   9:24:40.003    Master    E2 00 04 00 00 00            SET DAQ PTR               DAQ=0x4, ODT=0x0, ENTRY=0x0                                                            
+667    XCP   9:24:40.005    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+668    XCP   9:24:40.005    Master    E1 FF 04 00 40 01 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC0140, Ext=0x0                                     
+669    XCP   9:24:40.007    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+670    XCP   9:24:40.007    Master    E1 FF 03 00 24 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1A24, Ext=0x0                                     
+671    XCP   9:24:40.009    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+672    XCP   9:24:40.009    Master    E2 00 04 00 01 00            SET DAQ PTR               DAQ=0x4, ODT=0x1, ENTRY=0x0                                                            
+673    XCP   9:24:40.013    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+674    XCP   9:24:40.013    Master    E1 FF 01 00 27 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1A27, Ext=0x0                                     
+675    XCP   9:24:40.017    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+676    XCP   9:24:40.017    Master    E1 FF 04 00 34 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A34, Ext=0x0                                     
+677    XCP   9:24:40.019    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+678    XCP   9:24:40.019    Master    E1 FF 02 00 44 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1A44, Ext=0x0                                     
+679    XCP   9:24:40.021    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+680    XCP   9:24:40.021    Master    E2 00 04 00 02 00            SET DAQ PTR               DAQ=0x4, ODT=0x2, ENTRY=0x0                                                            
+681    XCP   9:24:40.023    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+682    XCP   9:24:40.023    Master    E1 FF 02 00 46 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1A46, Ext=0x0                                     
+683    XCP   9:24:40.025    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+684    XCP   9:24:40.025    Master    E0 00 04 00 04 00 01 00      SET DAQ LIST MODE         DAQ=0x4, Mode=0x0, Event=0x4, Prescaler=0x1, Prio=0x0                                  
+685    XCP   9:24:40.029    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+686    XCP   9:24:40.029    Master    DE 02 04 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x4                                                   
+687    XCP   9:24:40.033    ECU       FF 0C 00 00 00 00 48 91       -> OK                    FIRST_PID = 0xC                                                                        
+688    XCP   9:24:40.033    Master    E3 00 05 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x5                                                                  
+689    XCP   9:24:40.037    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+690    XCP   9:24:40.037    Master    E2 00 05 00 00 00            SET DAQ PTR               DAQ=0x5, ODT=0x0, ENTRY=0x0                                                            
+691    XCP   9:24:40.041    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+692    XCP   9:24:40.041    Master    E1 FF 04 00 94 FF EB FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEBFF94, Ext=0x0                                     
+693    XCP   9:24:40.045    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+694    XCP   9:24:40.045    Master    E1 FF 03 00 BC FF EB FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEBFFBC, Ext=0x0                                     
+695    XCP   9:24:40.049    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+696    XCP   9:24:40.049    Master    E2 00 05 00 01 00            SET DAQ PTR               DAQ=0x5, ODT=0x1, ENTRY=0x0                                                            
+697    XCP   9:24:40.053    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+698    XCP   9:24:40.053    Master    E1 FF 01 00 BF FF EB FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEBFFBF, Ext=0x0                                     
+699    XCP   9:24:40.057    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+700    XCP   9:24:40.057    Master    E1 FF 04 00 E0 00 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC00E0, Ext=0x0                                     
+701    XCP   9:24:40.061    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+702    XCP   9:24:40.061    Master    E1 FF 02 00 B8 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1CB8, Ext=0x0                                     
+703    XCP   9:24:40.065    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+704    XCP   9:24:40.065    Master    E2 00 05 00 02 00            SET DAQ PTR               DAQ=0x5, ODT=0x2, ENTRY=0x0                                                            
+705    XCP   9:24:40.069    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+706    XCP   9:24:40.069    Master    E1 FF 02 00 BA 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1CBA, Ext=0x0                                     
+707    XCP   9:24:40.073    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+708    XCP   9:24:40.073    Master    E0 00 05 00 05 00 01 00      SET DAQ LIST MODE         DAQ=0x5, Mode=0x0, Event=0x5, Prescaler=0x1, Prio=0x0                                  
+709    XCP   9:24:40.077    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+710    XCP   9:24:40.077    Master    DE 02 05 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x5                                                   
+711    XCP   9:24:40.081    ECU       FF 10 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x10                                                                       
+712    XCP   9:24:40.081    Master    E3 00 06 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x6                                                                  
+713    XCP   9:24:40.085    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+714    XCP   9:24:40.085    Master    E2 00 06 00 00 00            SET DAQ PTR               DAQ=0x6, ODT=0x0, ENTRY=0x0                                                            
+715    XCP   9:24:40.089    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+716    XCP   9:24:40.089    Master    E1 FF 04 00 B8 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC19B8, Ext=0x0                                     
+717    XCP   9:24:40.093    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+718    XCP   9:24:40.093    Master    E1 FF 03 00 BC 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC19BC, Ext=0x0                                     
+719    XCP   9:24:40.097    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+720    XCP   9:24:40.097    Master    E2 00 06 00 01 00            SET DAQ PTR               DAQ=0x6, ODT=0x1, ENTRY=0x0                                                            
+721    XCP   9:24:40.101    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+722    XCP   9:24:40.101    Master    E1 FF 01 00 BF 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC19BF, Ext=0x0                                     
+723    XCP   9:24:40.105    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+724    XCP   9:24:40.105    Master    E1 FF 04 00 C0 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC19C0, Ext=0x0                                     
+725    XCP   9:24:40.109    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+726    XCP   9:24:40.109    Master    E1 FF 02 00 C4 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC19C4, Ext=0x0                                     
+727    XCP   9:24:40.113    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+728    XCP   9:24:40.113    Master    E2 00 06 00 02 00            SET DAQ PTR               DAQ=0x6, ODT=0x2, ENTRY=0x0                                                            
+729    XCP   9:24:40.117    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+730    XCP   9:24:40.117    Master    E1 FF 02 00 C6 19 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC19C6, Ext=0x0                                     
+731    XCP   9:24:40.121    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+732    XCP   9:24:40.121    Master    E1 FF 01 00 4C 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC364C, Ext=0x0                                     
+733    XCP   9:24:40.125    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+734    XCP   9:24:40.125    Master    E1 FF 01 00 53 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3653, Ext=0x0                                     
+735    XCP   9:24:40.129    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+736    XCP   9:24:40.129    Master    E1 FF 01 00 BD 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3CBD, Ext=0x0                                     
+737    XCP   9:24:40.133    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+738    XCP   9:24:40.133    Master    E0 00 06 00 06 00 01 00      SET DAQ LIST MODE         DAQ=0x6, Mode=0x0, Event=0x6, Prescaler=0x1, Prio=0x0                                  
+739    XCP   9:24:40.137    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+740    XCP   9:24:40.137    Master    DE 02 06 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x6                                                   
+741    XCP   9:24:40.141    ECU       FF 14 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x14                                                                       
+742    XCP   9:24:40.141    Master    E3 00 07 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x7                                                                  
+743    XCP   9:24:40.145    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+744    XCP   9:24:40.145    Master    E2 00 07 00 00 00            SET DAQ PTR               DAQ=0x7, ODT=0x0, ENTRY=0x0                                                            
+745    XCP   9:24:40.149    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+746    XCP   9:24:40.149    Master    E1 FF 01 00 47 2D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2D47, Ext=0x0                                     
+747    XCP   9:24:40.153    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+748    XCP   9:24:40.153    Master    E1 FF 01 00 77 2E EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2E77, Ext=0x0                                     
+749    XCP   9:24:40.157    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+750    XCP   9:24:40.157    Master    E1 FF 04 00 98 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1C98, Ext=0x0                                     
+751    XCP   9:24:40.161    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+752    XCP   9:24:40.161    Master    E1 FF 01 00 AC 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1CAC, Ext=0x0                                     
+753    XCP   9:24:40.165    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+754    XCP   9:24:40.165    Master    E2 00 07 00 01 00            SET DAQ PTR               DAQ=0x7, ODT=0x1, ENTRY=0x0                                                            
+755    XCP   9:24:40.169    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+756    XCP   9:24:40.169    Master    E1 FF 03 00 AD 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1CAD, Ext=0x0                                     
+757    XCP   9:24:40.173    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+758    XCP   9:24:40.173    Master    E1 FF 04 00 D4 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1CD4, Ext=0x0                                     
+759    XCP   9:24:40.177    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+760    XCP   9:24:40.177    Master    E2 00 07 00 02 00            SET DAQ PTR               DAQ=0x7, ODT=0x2, ENTRY=0x0                                                            
+761    XCP   9:24:40.181    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+762    XCP   9:24:40.181    Master    E1 FF 04 00 EC 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2BEC, Ext=0x0                                     
+763    XCP   9:24:40.185    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+764    XCP   9:24:40.185    Master    E0 00 07 00 07 00 01 00      SET DAQ LIST MODE         DAQ=0x7, Mode=0x0, Event=0x7, Prescaler=0x1, Prio=0x0                                  
+765    XCP   9:24:40.189    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+766    XCP   9:24:40.189    Master    DE 02 07 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x7                                                   
+767    XCP   9:24:40.193    ECU       FF 19 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x19                                                                       
+768    XCP   9:24:40.193    Master    E3 00 08 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x8                                                                  
+769    XCP   9:24:40.197    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+770    XCP   9:24:40.197    Master    E2 00 08 00 00 00            SET DAQ PTR               DAQ=0x8, ODT=0x0, ENTRY=0x0                                                            
+771    XCP   9:24:40.201    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+772    XCP   9:24:40.201    Master    E1 FF 04 00 64 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A64, Ext=0x0                                     
+773    XCP   9:24:40.205    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+774    XCP   9:24:40.205    Master    E1 FF 03 00 F0 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1CF0, Ext=0x0                                     
+775    XCP   9:24:40.209    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+776    XCP   9:24:40.209    Master    E2 00 08 00 01 00            SET DAQ PTR               DAQ=0x8, ODT=0x1, ENTRY=0x0                                                            
+777    XCP   9:24:40.213    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+778    XCP   9:24:40.213    Master    E1 FF 01 00 F3 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1CF3, Ext=0x0                                     
+779    XCP   9:24:40.217    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+780    XCP   9:24:40.217    Master    E1 FF 04 00 E0 2A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2AE0, Ext=0x0                                     
+781    XCP   9:24:40.221    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+782    XCP   9:24:40.221    Master    E1 FF 02 00 E4 2A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2AE4, Ext=0x0                                     
+783    XCP   9:24:40.225    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+784    XCP   9:24:40.225    Master    E2 00 08 00 02 00            SET DAQ PTR               DAQ=0x8, ODT=0x2, ENTRY=0x0                                                            
+785    XCP   9:24:40.229    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+786    XCP   9:24:40.229    Master    E1 FF 02 00 E6 2A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2AE6, Ext=0x0                                     
+787    XCP   9:24:40.233    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+788    XCP   9:24:40.233    Master    E0 00 08 00 08 00 01 00      SET DAQ LIST MODE         DAQ=0x8, Mode=0x0, Event=0x8, Prescaler=0x1, Prio=0x0                                  
+789    XCP   9:24:40.237    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+790    XCP   9:24:40.237    Master    DE 02 08 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x8                                                   
+791    XCP   9:24:40.241    ECU       FF 1E 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x1E                                                                       
+792    XCP   9:24:40.241    Master    E3 00 09 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0x9                                                                  
+793    XCP   9:24:40.245    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+794    XCP   9:24:40.245    Master    E2 00 09 00 00 00            SET DAQ PTR               DAQ=0x9, ODT=0x0, ENTRY=0x0                                                            
+795    XCP   9:24:40.249    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+796    XCP   9:24:40.249    Master    E1 FF 01 00 6B 2D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2D6B, Ext=0x0                                     
+797    XCP   9:24:40.253    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+798    XCP   9:24:40.253    Master    E1 FF 04 00 DC FF EB FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEBFFDC, Ext=0x0                                     
+799    XCP   9:24:40.257    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+800    XCP   9:24:40.257    Master    E1 FF 02 00 00 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1D00, Ext=0x0                                     
+801    XCP   9:24:40.261    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+802    XCP   9:24:40.261    Master    E2 00 09 00 01 00            SET DAQ PTR               DAQ=0x9, ODT=0x1, ENTRY=0x0                                                            
+803    XCP   9:24:40.265    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+804    XCP   9:24:40.265    Master    E1 FF 02 00 02 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1D02, Ext=0x0                                     
+805    XCP   9:24:40.269    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+806    XCP   9:24:40.269    Master    E1 FF 04 00 0C 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1D0C, Ext=0x0                                     
+807    XCP   9:24:40.273    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+808    XCP   9:24:40.273    Master    E1 FF 01 00 28 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C28, Ext=0x0                                     
+809    XCP   9:24:40.277    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+810    XCP   9:24:40.277    Master    E2 00 09 00 02 00            SET DAQ PTR               DAQ=0x9, ODT=0x2, ENTRY=0x0                                                            
+811    XCP   9:24:40.281    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+812    XCP   9:24:40.281    Master    E1 FF 01 00 29 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C29, Ext=0x0                                     
+813    XCP   9:24:40.285    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+814    XCP   9:24:40.285    Master    E1 FF 04 00 1C 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2B1C, Ext=0x0                                     
+815    XCP   9:24:40.289    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+816    XCP   9:24:40.289    Master    E1 FF 02 00 20 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2B20, Ext=0x0                                     
+817    XCP   9:24:40.293    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+818    XCP   9:24:40.293    Master    E2 00 09 00 03 00            SET DAQ PTR               DAQ=0x9, ODT=0x3, ENTRY=0x0                                                            
+819    XCP   9:24:40.297    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+820    XCP   9:24:40.297    Master    E1 FF 02 00 22 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2B22, Ext=0x0                                     
+821    XCP   9:24:40.301    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+822    XCP   9:24:40.301    Master    E0 00 09 00 09 00 01 00      SET DAQ LIST MODE         DAQ=0x9, Mode=0x0, Event=0x9, Prescaler=0x1, Prio=0x0                                  
+823    XCP   9:24:40.305    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+824    XCP   9:24:40.305    Master    DE 02 09 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0x9                                                   
+825    XCP   9:24:40.309    ECU       FF 22 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x22                                                                       
+826    XCP   9:24:40.310    Master    E3 00 0A 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0xA                                                                  
+827    XCP   9:24:40.313    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+828    XCP   9:24:40.313    Master    E2 00 0A 00 00 00            SET DAQ PTR               DAQ=0xA, ODT=0x0, ENTRY=0x0                                                            
+829    XCP   9:24:40.317    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+830    XCP   9:24:40.317    Master    E1 FF 01 00 60 2F EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2F60, Ext=0x0                                     
+831    XCP   9:24:40.321    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+832    XCP   9:24:40.321    Master    E1 FF 01 00 61 2F EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2F61, Ext=0x0                                     
+833    XCP   9:24:40.325    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+834    XCP   9:24:40.325    Master    E1 FF 01 00 4B 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC364B, Ext=0x0                                     
+835    XCP   9:24:40.329    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+836    XCP   9:24:40.329    Master    E1 FF 04 00 9C 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A9C, Ext=0x0                                     
+837    XCP   9:24:40.333    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+838    XCP   9:24:40.333    Master    E2 00 0A 00 01 00            SET DAQ PTR               DAQ=0xA, ODT=0x1, ENTRY=0x0                                                            
+839    XCP   9:24:40.337    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+840    XCP   9:24:40.337    Master    E1 FF 04 00 9C 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1C9C, Ext=0x0                                     
+841    XCP   9:24:40.341    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+842    XCP   9:24:40.341    Master    E1 FF 03 00 04 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1D04, Ext=0x0                                     
+843    XCP   9:24:40.345    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+844    XCP   9:24:40.345    Master    E2 00 0A 00 02 00            SET DAQ PTR               DAQ=0xA, ODT=0x2, ENTRY=0x0                                                            
+845    XCP   9:24:40.349    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+846    XCP   9:24:40.349    Master    E1 FF 01 00 07 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1D07, Ext=0x0                                     
+847    XCP   9:24:40.353    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+848    XCP   9:24:40.353    Master    E1 FF 04 00 08 1D EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1D08, Ext=0x0                                     
+849    XCP   9:24:40.357    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+850    XCP   9:24:40.357    Master    E1 FF 01 00 EA 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BEA, Ext=0x0                                     
+851    XCP   9:24:40.361    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+852    XCP   9:24:40.361    Master    E1 FF 01 00 FF 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BFF, Ext=0x0                                     
+853    XCP   9:24:40.365    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+854    XCP   9:24:40.365    Master    E2 00 0A 00 03 00            SET DAQ PTR               DAQ=0xA, ODT=0x3, ENTRY=0x0                                                            
+855    XCP   9:24:40.369    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+856    XCP   9:24:40.369    Master    E1 FF 01 00 3A 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C3A, Ext=0x0                                     
+857    XCP   9:24:40.373    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+858    XCP   9:24:40.373    Master    E1 FF 01 00 3B 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C3B, Ext=0x0                                     
+859    XCP   9:24:40.377    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+860    XCP   9:24:40.377    Master    E1 FF 04 00 14 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2B14, Ext=0x0                                     
+861    XCP   9:24:40.381    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+862    XCP   9:24:40.381    Master    E0 00 0A 00 0A 00 01 00      SET DAQ LIST MODE         DAQ=0xA, Mode=0x0, Event=0xA, Prescaler=0x1, Prio=0x0                                  
+863    XCP   9:24:40.385    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+864    XCP   9:24:40.385    Master    DE 02 0A 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0xA                                                   
+865    XCP   9:24:40.389    ECU       FF 27 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x27                                                                       
+866    XCP   9:24:40.389    Master    E3 00 0B 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0xB                                                                  
+867    XCP   9:24:40.393    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+868    XCP   9:24:40.393    Master    E2 00 0B 00 00 00            SET DAQ PTR               DAQ=0xB, ODT=0x0, ENTRY=0x0                                                            
+869    XCP   9:24:40.397    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+870    XCP   9:24:40.397    Master    E1 FF 01 00 6C 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC366C, Ext=0x0                                     
+871    XCP   9:24:40.401    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+872    XCP   9:24:40.401    Master    E1 FF 01 00 6D 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC366D, Ext=0x0                                     
+873    XCP   9:24:40.405    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+874    XCP   9:24:40.405    Master    E1 FF 01 00 70 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3670, Ext=0x0                                     
+875    XCP   9:24:40.409    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+876    XCP   9:24:40.409    Master    E1 FF 01 00 71 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3671, Ext=0x0                                     
+877    XCP   9:24:40.413    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+878    XCP   9:24:40.413    Master    E1 FF 03 00 F8 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1CF8, Ext=0x0                                     
+879    XCP   9:24:40.417    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+880    XCP   9:24:40.417    Master    E2 00 0B 00 01 00            SET DAQ PTR               DAQ=0xB, ODT=0x1, ENTRY=0x0                                                            
+881    XCP   9:24:40.421    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+882    XCP   9:24:40.421    Master    E1 FF 01 00 FB 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1CFB, Ext=0x0                                     
+883    XCP   9:24:40.425    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+884    XCP   9:24:40.425    Master    E1 FF 04 00 FC 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1CFC, Ext=0x0                                     
+885    XCP   9:24:40.429    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+886    XCP   9:24:40.429    Master    E1 FF 01 00 C3 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BC3, Ext=0x0                                     
+887    XCP   9:24:40.433    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+888    XCP   9:24:40.433    Master    E1 FF 01 00 E3 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BE3, Ext=0x0                                     
+889    XCP   9:24:40.437    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+890    XCP   9:24:40.437    Master    E2 00 0B 00 02 00            SET DAQ PTR               DAQ=0xB, ODT=0x2, ENTRY=0x0                                                            
+891    XCP   9:24:40.441    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+892    XCP   9:24:40.441    Master    E1 FF 01 00 E4 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BE4, Ext=0x0                                     
+893    XCP   9:24:40.445    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+894    XCP   9:24:40.445    Master    E1 FF 01 00 E7 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BE7, Ext=0x0                                     
+895    XCP   9:24:40.449    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+896    XCP   9:24:40.449    Master    E1 FF 01 00 E9 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BE9, Ext=0x0                                     
+897    XCP   9:24:40.453    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+898    XCP   9:24:40.453    Master    E1 FF 01 00 09 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C09, Ext=0x0                                     
+899    XCP   9:24:40.457    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+900    XCP   9:24:40.457    Master    E1 FF 03 00 18 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC2B18, Ext=0x0                                     
+901    XCP   9:24:40.461    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+902    XCP   9:24:40.461    Master    E2 00 0B 00 03 00            SET DAQ PTR               DAQ=0xB, ODT=0x3, ENTRY=0x0                                                            
+903    XCP   9:24:40.465    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+904    XCP   9:24:40.465    Master    E1 FF 01 00 1B 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2B1B, Ext=0x0                                     
+905    XCP   9:24:40.469    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+906    XCP   9:24:40.469    Master    E0 00 0B 00 0B 00 01 00      SET DAQ LIST MODE         DAQ=0xB, Mode=0x0, Event=0xB, Prescaler=0x1, Prio=0x0                                  
+907    XCP   9:24:40.473    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+908    XCP   9:24:40.473    Master    DE 02 0B 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0xB                                                   
+909    XCP   9:24:40.477    ECU       FF 2C 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x2C                                                                       
+910    XCP   9:24:40.477    Master    E3 00 0C 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0xC                                                                  
+911    XCP   9:24:40.481    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+912    XCP   9:24:40.481    Master    E2 00 0C 00 00 00            SET DAQ PTR               DAQ=0xC, ODT=0x0, ENTRY=0x0                                                            
+913    XCP   9:24:40.485    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+914    XCP   9:24:40.485    Master    E1 FF 04 00 4C 0B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC0B4C, Ext=0x0                                     
+915    XCP   9:24:40.489    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+916    XCP   9:24:40.489    Master    E1 FF 03 00 4C 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1C4C, Ext=0x0                                     
+917    XCP   9:24:40.493    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+918    XCP   9:24:40.493    Master    E2 00 0C 00 01 00            SET DAQ PTR               DAQ=0xC, ODT=0x1, ENTRY=0x0                                                            
+919    XCP   9:24:40.497    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+920    XCP   9:24:40.497    Master    E1 FF 01 00 4F 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1C4F, Ext=0x0                                     
+921    XCP   9:24:40.501    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+922    XCP   9:24:40.501    Master    E1 FF 04 00 50 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1C50, Ext=0x0                                     
+923    XCP   9:24:40.505    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+924    XCP   9:24:40.505    Master    E1 FF 02 00 54 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1C54, Ext=0x0                                     
+925    XCP   9:24:40.509    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+926    XCP   9:24:40.509    Master    E2 00 0C 00 02 00            SET DAQ PTR               DAQ=0xC, ODT=0x2, ENTRY=0x0                                                            
+927    XCP   9:24:40.513    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+928    XCP   9:24:40.513    Master    E1 FF 02 00 56 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC1C56, Ext=0x0                                     
+929    XCP   9:24:40.517    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+930    XCP   9:24:40.517    Master    E1 FF 04 00 68 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1C68, Ext=0x0                                     
+931    XCP   9:24:40.521    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+932    XCP   9:24:40.521    Master    E1 FF 01 00 6C 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1C6C, Ext=0x0                                     
+933    XCP   9:24:40.525    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+934    XCP   9:24:40.525    Master    E2 00 0C 00 03 00            SET DAQ PTR               DAQ=0xC, ODT=0x3, ENTRY=0x0                                                            
+935    XCP   9:24:40.529    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+936    XCP   9:24:40.529    Master    E1 FF 03 00 6D 1C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1C6D, Ext=0x0                                     
+937    XCP   9:24:40.533    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+938    XCP   9:24:40.533    Master    E1 FF 01 00 5C 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC365C, Ext=0x0                                     
+939    XCP   9:24:40.537    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+940    XCP   9:24:40.537    Master    E1 FF 01 00 5D 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC365D, Ext=0x0                                     
+941    XCP   9:24:40.541    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+942    XCP   9:24:40.541    Master    E1 FF 01 00 5E 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC365E, Ext=0x0                                     
+943    XCP   9:24:40.545    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+944    XCP   9:24:40.545    Master    E1 FF 01 00 5F 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC365F, Ext=0x0                                     
+945    XCP   9:24:40.549    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+946    XCP   9:24:40.549    Master    E2 00 0C 00 04 00            SET DAQ PTR               DAQ=0xC, ODT=0x4, ENTRY=0x0                                                            
+947    XCP   9:24:40.553    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+948    XCP   9:24:40.553    Master    E1 FF 01 00 60 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3660, Ext=0x0                                     
+949    XCP   9:24:40.557    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+950    XCP   9:24:40.557    Master    E1 FF 01 00 A0 36 EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC36A0, Ext=0x0                                     
+951    XCP   9:24:40.561    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+952    XCP   9:24:40.561    Master    E1 FF 01 00 BF 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BBF, Ext=0x0                                     
+953    XCP   9:24:40.565    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+954    XCP   9:24:40.565    Master    E1 FF 01 00 37 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C37, Ext=0x0                                     
+955    XCP   9:24:40.569    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+956    XCP   9:24:40.569    Master    E1 FF 01 00 BB 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3CBB, Ext=0x0                                     
+957    XCP   9:24:40.573    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+958    XCP   9:24:40.573    Master    E0 00 0C 00 0C 00 01 00      SET DAQ LIST MODE         DAQ=0xC, Mode=0x0, Event=0xC, Prescaler=0x1, Prio=0x0                                  
+959    XCP   9:24:40.577    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+960    XCP   9:24:40.577    Master    DE 02 0C 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0xC                                                   
+961    XCP   9:24:40.581    ECU       FF 30 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x30                                                                       
+962    XCP   9:24:40.581    Master    E3 00 0D 00                  CLEAR DAQ LIST            DAQ_LIST_NUMBER = 0xD                                                                  
+963    XCP   9:24:40.585    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+964    XCP   9:24:40.585    Master    E2 00 0D 00 00 00            SET DAQ PTR               DAQ=0xD, ODT=0x0, ENTRY=0x0                                                            
+965    XCP   9:24:40.589    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+966    XCP   9:24:40.589    Master    E1 FF 04 00 68 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC1A68, Ext=0x0                                     
+967    XCP   9:24:40.593    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+968    XCP   9:24:40.593    Master    E1 FF 03 00 98 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC1A98, Ext=0x0                                     
+969    XCP   9:24:40.597    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+970    XCP   9:24:40.597    Master    E2 00 0D 00 01 00            SET DAQ PTR               DAQ=0xD, ODT=0x1, ENTRY=0x0                                                            
+971    XCP   9:24:40.601    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+972    XCP   9:24:40.601    Master    E1 FF 01 00 9B 1A EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC1A9B, Ext=0x0                                     
+973    XCP   9:24:40.605    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+974    XCP   9:24:40.605    Master    E1 FF 01 00 84 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3B84, Ext=0x0                                     
+975    XCP   9:24:40.609    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+976    XCP   9:24:40.609    Master    E1 FF 01 00 85 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3B85, Ext=0x0                                     
+977    XCP   9:24:40.613    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+978    XCP   9:24:40.613    Master    E1 FF 01 00 DE 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BDE, Ext=0x0                                     
+979    XCP   9:24:40.617    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+980    XCP   9:24:40.617    Master    E1 FF 01 00 F5 3B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3BF5, Ext=0x0                                     
+981    XCP   9:24:40.621    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+982    XCP   9:24:40.621    Master    E1 FF 01 00 05 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C05, Ext=0x0                                     
+983    XCP   9:24:40.625    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+984    XCP   9:24:40.625    Master    E1 FF 01 00 06 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C06, Ext=0x0                                     
+985    XCP   9:24:40.629    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+986    XCP   9:24:40.629    Master    E2 00 0D 00 02 00            SET DAQ PTR               DAQ=0xD, ODT=0x2, ENTRY=0x0                                                            
+987    XCP   9:24:40.633    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+988    XCP   9:24:40.633    Master    E1 FF 01 00 07 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C07, Ext=0x0                                     
+989    XCP   9:24:40.637    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+990    XCP   9:24:40.637    Master    E1 FF 01 00 0E 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C0E, Ext=0x0                                     
+991    XCP   9:24:40.641    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+992    XCP   9:24:40.641    Master    E1 FF 01 00 10 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C10, Ext=0x0                                     
+993    XCP   9:24:40.645    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+994    XCP   9:24:40.645    Master    E1 FF 01 00 1B 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C1B, Ext=0x0                                     
+995    XCP   9:24:40.649    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+996    XCP   9:24:40.649    Master    E1 FF 03 00 0C 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x3, Addr=0xFEEC2B0C, Ext=0x0                                     
+997    XCP   9:24:40.653    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+998    XCP   9:24:40.653    Master    E2 00 0D 00 03 00            SET DAQ PTR               DAQ=0xD, ODT=0x3, ENTRY=0x0                                                            
+999    XCP   9:24:40.657    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1000   XCP   9:24:40.657    Master    E1 FF 01 00 0F 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC2B0F, Ext=0x0                                     
+1001   XCP   9:24:40.661    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1002   XCP   9:24:40.661    Master    E1 FF 04 00 10 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2B10, Ext=0x0                                     
+1003   XCP   9:24:40.665    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1004   XCP   9:24:40.665    Master    E1 FF 01 00 1E 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C1E, Ext=0x0                                     
+1005   XCP   9:24:40.669    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1006   XCP   9:24:40.669    Master    E1 FF 01 00 2A 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C2A, Ext=0x0                                     
+1007   XCP   9:24:40.673    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1008   XCP   9:24:40.673    Master    E2 00 0D 00 04 00            SET DAQ PTR               DAQ=0xD, ODT=0x4, ENTRY=0x0                                                            
+1009   XCP   9:24:40.677    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1010   XCP   9:24:40.677    Master    E1 FF 01 00 2B 3C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x1, Addr=0xFEEC3C2B, Ext=0x0                                     
+1011   XCP   9:24:40.679    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1012   XCP   9:24:40.679    Master    E1 FF 04 00 E4 2B EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x4, Addr=0xFEEC2BE4, Ext=0x0                                     
+1013   XCP   9:24:40.681    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1014   XCP   9:24:40.681    Master    E1 FF 02 00 64 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2C64, Ext=0x0                                     
+1015   XCP   9:24:40.683    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1016   XCP   9:24:40.683    Master    E2 00 0D 00 05 00            SET DAQ PTR               DAQ=0xD, ODT=0x5, ENTRY=0x0                                                            
+1017   XCP   9:24:40.685    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1018   XCP   9:24:40.685    Master    E1 FF 02 00 66 2C EC FE      WRITE DAQ                 Bitoffset=0xFF, Size=0x2, Addr=0xFEEC2C66, Ext=0x0                                     
+1019   XCP   9:24:40.687    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1020   XCP   9:24:40.687    Master    E0 00 0D 00 0D 00 01 00      SET DAQ LIST MODE         DAQ=0xD, Mode=0x0, Event=0xD, Prescaler=0x1, Prio=0x0                                  
+1021   XCP   9:24:40.689    ECU       FF 00 00 00 00 00 48 91       -> OK                                                                                                           
+1022   XCP   9:24:40.689    Master    DE 02 0D 00                  START STOP DAQ LIST       Mode = SELECT, DAQ_LIST_NUMBER = 0xD                                                   
+1023   XCP   9:24:40.691    ECU       FF 37 00 00 00 00 48 91       -> OK                    FIRST_PID = 0x37                                                                       
