@@ -17,7 +17,11 @@ LabVIEW 2019
 [NI ECU Measurement and Calibration Toolkit](https://www.ni.com/en-us/support/downloads/software-products/download.ecu-measurement-and-calibration-toolkit.html#445924)
 
 ### Known Issues ###
-
+1. DAQ properties of GET_DAQ_PROCESSOR_INFO are ignored.
+2. Event are ignored.
+3. Does not support dynamic DAQ List.
+4. Only support CAN 2.0 with MAX ODT Entries of 7.
+5. Does not support data type of longer than 4 bytes.
 
 ### Support and Contact ###
 This add-on is provided as open-source software.  If it does not meet your exact specification, you are encouraged to modify the source code to meet your needs.  It is not officially supported by NI.

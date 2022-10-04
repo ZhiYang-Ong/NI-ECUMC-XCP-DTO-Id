@@ -19,10 +19,11 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="MultipleMeasurements_XcpDiffId.vi" Type="VI" URL="../Example/MultipleMeasurements_XcpDiffId.vi"/>
+		<Item Name="Examples" Type="Folder">
+			<Item Name="MultipleMeasurements_XcpDiffId.vi" Type="VI" URL="../Example/MultipleMeasurements_XcpDiffId.vi"/>
+		</Item>
 		<Item Name="A2L Utility.lvlib" Type="Library" URL="../A2L Utility.lvlib"/>
 		<Item Name="XCP_DaqDtoId.lvlib" Type="Library" URL="../XCP_DaqDtoId.lvlib"/>
-		<Item Name="SpecialFlag.ctl" Type="VI" URL="../DAQList/TypeDef/SpecialFlag.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="_XNET Convert List From Array To Comma.vi" Type="VI" URL="/&lt;vilib&gt;/xnet/xnet.llb/_XNET Convert List From Array To Comma.vi"/>
