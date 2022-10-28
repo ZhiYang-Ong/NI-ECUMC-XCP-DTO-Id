@@ -21,6 +21,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="MultipleMeasurements_XcpDiffId.vi" Type="VI" URL="../Example/MultipleMeasurements_XcpDiffId.vi"/>
+			<Item Name="MultipleMeasurements_XcpDiffId_Event.vi" Type="VI" URL="../Example/MultipleMeasurements_XcpDiffId_Event.vi"/>
 		</Item>
 		<Item Name="A2L Utility.lvlib" Type="Library" URL="../A2L Utility.lvlib"/>
 		<Item Name="XCP_DaqDtoId.lvlib" Type="Library" URL="../XCP_DaqDtoId.lvlib"/>
@@ -183,7 +184,6 @@
 			<Item Name="nixlvapi.dll" Type="Document" URL="nixlvapi.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Read DAQ ref.vi" Type="VI" URL="../DAQList/PropertyNodes/Read DAQ ref.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
